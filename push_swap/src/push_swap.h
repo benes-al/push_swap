@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 18:23:46 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/09 21:22:22 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/10 11:31:27 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ void	pb(t_stack *stack_a, t_stack *stack_b);
 void	ra(t_stack *stack_a);
 void	rb(t_stack *stack_b);
 void	rr(t_stack *stack_a, t_stack *stack_b);
-void	reverse_rotate(t_stack *stack);
+void	rra(t_stack *stack_a);
+void	rrb(t_stack *stack_b);
+void	rrr(t_stack *stack_a, t_stack *stack_b);
 
 #endif

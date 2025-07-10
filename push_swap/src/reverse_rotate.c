@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/09 19:16:19 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/09 21:55:39 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/10 12:03:16 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ void	reverse_rotate(t_stack *stack)
 	node = 1;
 	temp.top = stack->top;
 	temp.size = stack->size; 
-	if (stack->size < 2)
-		return ;
 	while (node < (stack->size) - 1)
 	{
 		temp.top = temp.top->next;
@@ -32,21 +30,30 @@ void	reverse_rotate(t_stack *stack)
 	temp.top->next = NULL;
 }
 
-void	rra(t_stack *stack_a);
+void	rra(t_stack *stack_a)
 {
-	reverse_rotate(&stack_a);
-	write(1, "rra\n", 4);
+	if (stack_a->size >= 2)
+	{
+		reverse_rotate(stack_a);
+		write(1, "rra\n", 4);
+	}
 }
 
-void	rrb(t_stack *stack_b);
+void	rrb(t_stack *stack_b)
 {
-	reverse_rotate(&stack_b);
-	write(1, "rrb\n", 4);
+	if (stack_b->size >= 2)
+	{
+		reverse_rotate(stack_b);
+		write(1, "rrb\n", 4);
+	}
 }
 
-void	rrr(t_stack *stack_a, t_stack *stack_b);
+void	rrr(t_stack *stack_a, t_stack *stack_b)
 {
-	reverse_rotate(&stack_a);
-	reverse_rotate(&stack_b);
-	write(1, "rrr\n", 4);
+	if (stack_a->size >= 2 && stack_b->size >= 2)
+	{
+		reverse_rotate(stack_a);
+		reverse_rotate(stack_b);
+		write(1, "rrr\n", 4);
+	}
 }

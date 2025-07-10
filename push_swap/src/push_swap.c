@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 13:56:55 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/09 20:01:09 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/10 12:04:53 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,10 +70,13 @@ int	main(int argc, char **argv)
 	print_stack(stack_b);
 	printf("------------------------------\n");
 	
-	reverse_rotate(&stack_a); 
+	pb(&stack_a, &stack_b);
+	rr(&stack_a, &stack_b);
 
 	printf("\nAfter operation stack_a:\n");
 	print_stack(stack_a);
+	printf("\nAfter operation stack_b:\n");
+	print_stack(stack_b);
 	printf("------------------------------\n");
 
 	return (0);
