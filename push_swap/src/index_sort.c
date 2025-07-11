@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   indice_sort.c                                      :+:      :+:    :+:   */
+/*   index_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 14:15:34 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/11 14:20:26 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/11 20:45:33 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	indice_sort(t_stack *stack)
+void	index_sort(t_stack *stack)
 {
  	t_node	*min;
  	t_node	*current;

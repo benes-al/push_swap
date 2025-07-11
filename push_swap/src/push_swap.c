@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 13:56:55 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/10 21:46:30 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/11 21:32:23 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,13 +71,14 @@ int	main(int argc, char **argv)
 	print_stack(stack_b);
 	printf("------------------------------\n");
 	
-	indice_sort(&stack_a);
-
+	sorting_3_numbers(&stack_a);
+	
 	printf("\nAfter operation stack_a:\n");
 	print_stack(stack_a);
 	printf("\nAfter operation stack_b:\n");
 	print_stack(stack_b);
 	printf("------------------------------\n");
+
 
 	return (0);
 }

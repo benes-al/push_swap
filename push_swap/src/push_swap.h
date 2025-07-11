@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 18:23:46 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/10 21:45:41 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/11 20:45:12 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,13 @@ void	rra(t_stack *stack_a);
 void	rrb(t_stack *stack_b);
 void	rrr(t_stack *stack_a, t_stack *stack_b);
 
-void	indice_sort(t_stack *stack);
+void	index_sort(t_stack *stack);
+
+int		calculate_max_bytes(int max_index);
+
+void	sorting_2_numbers(t_stack *stack_a);
+void	sorting_3_numbers(t_stack *stack_a);
+void	sorting_4_numbers(t_stack *stack_a);
+void	sorting_5_numbers(t_stack *stack_a);
+
 #endif
