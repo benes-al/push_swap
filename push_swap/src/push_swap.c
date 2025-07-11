@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 13:56:55 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/10 12:04:53 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/10 21:46:30 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int	main(int argc, char **argv)
 {
 	t_stack	stack_a;
 	t_stack stack_b;
+	
 	int		i;
 	int		j;
 	
@@ -51,7 +52,7 @@ int	main(int argc, char **argv)
 	stack_a.top = NULL;
 	stack_a.size = 0;
 	stack_b.top = NULL;
-	stack_b.size = 0;	
+	stack_b.size = 0;
 	if (argc < 3)
 	{
 		printf("Please provide at least two numbers.\n");
@@ -60,7 +61,7 @@ int	main(int argc, char **argv)
 
 	while (i > 0)
 	{
-		add_node_to_stack(&stack_a, atoi(argv[i]), i - 1);
+		add_node_to_stack(&stack_a, atoi(argv[i]), -1);
 		i--;
 	}
 	
@@ -70,8 +71,7 @@ int	main(int argc, char **argv)
 	print_stack(stack_b);
 	printf("------------------------------\n");
 	
-	pb(&stack_a, &stack_b);
-	rr(&stack_a, &stack_b);
+	indice_sort(&stack_a);
 
 	printf("\nAfter operation stack_a:\n");
 	print_stack(stack_a);

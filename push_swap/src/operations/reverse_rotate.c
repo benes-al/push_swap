@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/09 19:16:19 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/10 12:03:16 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/10 14:58:29 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	reverse_rotate(t_stack *stack)
 
 void	rra(t_stack *stack_a)
 {
-	if (stack_a->size >= 2)
+	if (!stack_a && stack_a->size >= 2)
 	{
 		reverse_rotate(stack_a);
 		write(1, "rra\n", 4);
@@ -41,7 +41,7 @@ void	rra(t_stack *stack_a)
 
 void	rrb(t_stack *stack_b)
 {
-	if (stack_b->size >= 2)
+	if (!stack_b && stack_b->size >= 2)
 	{
 		reverse_rotate(stack_b);
 		write(1, "rrb\n", 4);
@@ -50,7 +50,7 @@ void	rrb(t_stack *stack_b)
 
 void	rrr(t_stack *stack_a, t_stack *stack_b)
 {
-	if (stack_a->size >= 2 && stack_b->size >= 2)
+	if (!stack_a && stack_a->size >= 2 && !stack_b && stack_b->size >= 2)
 	{
 		reverse_rotate(stack_a);
 		reverse_rotate(stack_b);
