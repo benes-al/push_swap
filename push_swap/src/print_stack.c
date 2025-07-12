@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calculate_max_bytes.c                              :+:      :+:    :+:   */
+/*   print_stack.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/11 16:39:50 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/12 15:00:06 by benes-al         ###   ########.fr       */
+/*   Created: 2025/07/12 17:45:43 by benes-al          #+#    #+#             */
+/*   Updated: 2025/07/12 17:46:07 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	calculate_max_bytes(int max_index)
+void	print_stack(t_stack stack)
 {
-	int	i;
-
-	i = 0;
-	while ((max_index >> i) != 0)
-		i++;
-	return (i);
+	if(!stack.top)
+	{
+		write(1, "empty\n", 6);
+		return ;
+	}
+	t_node *current = stack.top;
+	printf("Stack (top to bottom):\n");
+	while (current)
+	{
+		printf("Value: %d | Index: %d\n", current->value, current->index);
+		current = current->next;
+	}
 }

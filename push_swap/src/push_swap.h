@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 18:23:46 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/11 20:45:12 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/12 18:16:22 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <limits.h>
+#include <stdbool.h>
 
 #include <stdio.h>
 
@@ -36,15 +37,6 @@ typedef struct s_stack
 	int		size;
 }	t_stack;
 
-//libft
-
-char	**ft_split(char *s, char c);
-int		ft_wrdcnt(char *str, char sep);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
-size_t	ft_strlen(const char *str);
-int		ft_isdigit(int c);
-int		ft_atoi(const char *nptr);
-int		ft_printf(const char *format, ...);
 
 //operations
 
@@ -60,13 +52,22 @@ void	rra(t_stack *stack_a);
 void	rrb(t_stack *stack_b);
 void	rrr(t_stack *stack_a, t_stack *stack_b);
 
-void	index_sort(t_stack *stack);
 
+//radix helper functions
+
+void	sort_index(t_stack *stack);
 int		calculate_max_bytes(int max_index);
 
-void	sorting_2_numbers(t_stack *stack_a);
-void	sorting_3_numbers(t_stack *stack_a);
-void	sorting_4_numbers(t_stack *stack_a);
-void	sorting_5_numbers(t_stack *stack_a);
+
+//sort up to five numbers
+
+void	sort_two_numbers(t_stack *stack_a);
+void	sort_three_numbers(t_stack *stack_a);
+void	sort_four_numbers(t_stack *stack_a, t_stack *stack_b);
+void	sort_five_numbers(t_stack *stack_a, t_stack *stack_b);
+
+void	parser(int argc, char **argv, t_stack *stack_a);
+bool	is_stack_sorted(t_stack *stack_a);
+void	print_stack(t_stack stack);
 
 #endif

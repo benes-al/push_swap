@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calculate_max_bytes.c                              :+:      :+:    :+:   */
+/*   is_stack_sorted.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/11 16:39:50 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/12 15:00:06 by benes-al         ###   ########.fr       */
+/*   Created: 2025/07/12 16:01:38 by benes-al          #+#    #+#             */
+/*   Updated: 2025/07/12 18:33:20 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	calculate_max_bytes(int max_index)
+bool	is_stack_sorted(t_stack *stack_a)
 {
-	int	i;
-
-	i = 0;
-	while ((max_index >> i) != 0)
-		i++;
-	return (i);
+	t_node	*current_node;
+	
+	current_node = stack_a->top;
+	while (current_node->next)
+	{
+		if (current_node->value > current_node->next->value)
+			return (0);
+		current_node = current_node->next;
+	}
+	return (1);
 }
