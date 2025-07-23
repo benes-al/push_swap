@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 18:23:46 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/12 18:16:22 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/23 21:18:50 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,9 @@ void	sort_five_numbers(t_stack *stack_a, t_stack *stack_b);
 void	parser(int argc, char **argv, t_stack *stack_a);
 bool	is_stack_sorted(t_stack *stack_a);
 void	print_stack(t_stack stack);
+
+//others
+
+void free_stack(t_stack *stack);
 
 #endif

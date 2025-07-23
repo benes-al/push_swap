@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 13:56:55 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/12 18:30:35 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/23 21:18:55 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(int argc, char **argv)
 	
 	parser (argc, argv, &stack_a);
 
-	/* printf("Before operation stack_a:\n");
+	printf("Before operation stack_a:\n");
 	print_stack(stack_a);
 	printf("\nBefore operation stack_b:\n");
 	print_stack(stack_b);
@@ -36,8 +36,10 @@ int	main(int argc, char **argv)
 	printf("\nAfter operation stack_b:\n");
 	print_stack(stack_b);
 	printf("------------------------------\n");
- */
-	printf("%d\n", is_stack_sorted(&stack_a));
+
+	//printf("%d\n", is_stack_sorted(&stack_a));
+	
+	free_stack(&stack_a);
 
 	return (0);
 }
