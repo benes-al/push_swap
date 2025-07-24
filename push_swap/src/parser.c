@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 15:06:45 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/23 22:21:59 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/24 21:12:17 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,10 @@ bool	add_node_to_stack(t_stack *stack, int value, int index)
 }
 
 bool	verify_argc_number(int argc)
-{
-
-	if (argc < 3)
+{ 
+	if (argc < 2)
 	{
-		printf("Please provide at least two numbers.\n");
+		write(2, "Error\n", 6);
 		exit (1);
 	}
 	return (1);
@@ -42,7 +41,7 @@ void	fill_stack(int argc, char **argv, t_stack *stack_a)
 {
 	int		i;
 	
-	i = argc - 1;
+	i = argc;
 	while (i > 0)
 	{
 		if (add_node_to_stack(stack_a, atoi(argv[i]), -1))
@@ -52,8 +51,36 @@ void	fill_stack(int argc, char **argv, t_stack *stack_a)
 	}
 }
 
+char **tolkenization(char **argv)
+{
+	char	**tokens;
+	int		i;
+	int		j;
+	
+	tokens = ft_split(argv[1]);
+	i = 0;
+	j = 0;
+	while (tokens[i])
+		i++;
+	if (i < 1)
+	{
+		write(2, "Error\n", 6);
+		exit(1);
+	}
+	while (j < i)
+	{
+		printf("%i\n", atoi(tokens[j]));
+		j++;
+	}
+	return (ft_split(argv[1]));
+}
+
 void	parser(int argc, char **argv, t_stack *stack_a)
 {
-	if (verify_argc_number(argc))
-		fill_stack(argc, argv, stack_a);
+	if(verify_argc_number(argc) && argc == 2)
+	{
+		tolkenization(argv);
+	}
+	if (verify_argc_number(argc) && argc > 2)
+		fill_stack((argc - 1), argv, stack_a);
 }
