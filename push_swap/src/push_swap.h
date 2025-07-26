@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 18:23:46 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/24 19:25:47 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/26 10:50:37 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,7 @@ void	print_stack(t_stack stack);
 
 void 	free_stack(t_stack *stack);
 char	**ft_split(char *s);
+long	ft_atol(const char *token);
+bool	check_duplicates(t_stack *stack_a);
 
 #endif

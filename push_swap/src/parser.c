@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 15:06:45 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/24 21:12:17 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/26 10:51:40 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,12 +51,13 @@ void	fill_stack(int argc, char **argv, t_stack *stack_a)
 	}
 }
 
-char **tolkenization(char **argv)
+/* char **tolkenization(char **argv)
 {
 	char	**tokens;
 	int		i;
 	int		j;
 	
+	tokens = NULL;
 	tokens = ft_split(argv[1]);
 	i = 0;
 	j = 0;
@@ -73,14 +74,15 @@ char **tolkenization(char **argv)
 		j++;
 	}
 	return (ft_split(argv[1]));
-}
+} */
 
 void	parser(int argc, char **argv, t_stack *stack_a)
 {
-	if(verify_argc_number(argc) && argc == 2)
+	/* if(verify_argc_number(argc) && argc == 2)
 	{
 		tolkenization(argv);
-	}
+	} */
 	if (verify_argc_number(argc) && argc > 2)
 		fill_stack((argc - 1), argv, stack_a);
 }
+
