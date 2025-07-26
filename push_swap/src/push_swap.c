@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 13:56:55 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/26 11:17:11 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/26 12:29:18 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ int	main(int argc, char **argv)
 	print_stack(stack_b);
 	printf("------------------------------\n");
  */
-	printf("%d\n", check_duplicates(&stack_a));
+	printf("%d\n", check_min_max(&stack_a));
 	return (0);
 }

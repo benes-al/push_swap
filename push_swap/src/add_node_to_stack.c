@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   add_node_to_stack.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/24 18:20:36 by benes-al          #+#    #+#             */
-/*   Updated: 2025/04/25 08:49:19 by benes-al         ###   ########.fr       */
+/*   Created: 2025/07/26 15:26:55 by benes-al          #+#    #+#             */
+/*   Updated: 2025/07/26 15:26:59 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-size_t	ft_strlen(const char *str)
+bool	add_node_to_stack(t_stack *stack, int value, int index)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-	{
-		i++;
-	}
-	return (i);
+	t_node *new_node;
+	
+	new_node = malloc(sizeof(t_node));
+	if (!new_node)
+		return (0);
+	new_node->value = value;
+	new_node->index = index;
+	new_node->next = stack->top;
+	stack->top = new_node;
+	stack->size++;
+	return (1);
 }
-/*
-int main(void) 
-{
-	char name[] = "Hello :)";
-    
-	printf("Length: %zu\n", ft_strlen(name));
-}*/

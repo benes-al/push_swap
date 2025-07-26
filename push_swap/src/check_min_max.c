@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   helper_ft_putchar.c                                :+:      :+:    :+:   */
+/*   check_min_max.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/03 13:00:51 by benes-al          #+#    #+#             */
-/*   Updated: 2025/05/03 13:01:04 by benes-al         ###   ########.fr       */
+/*   Created: 2025/07/26 12:17:03 by benes-al          #+#    #+#             */
+/*   Updated: 2025/07/26 13:56:58 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "push_swap.h"
 
-int	ft_putchar(int c)
+bool	check_min_max(long token)
 {
-	int	count;
-
-	count = write(1, &c, 1);
-	return (count);
+	if (token < INT_MIN || token > INT_MAX)
+		return (0);
+	return (1);
 }

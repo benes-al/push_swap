@@ -1,43 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   is_valid_number.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/17 15:10:57 by benes-al          #+#    #+#             */
-/*   Updated: 2025/04/19 16:18:44 by benes-al         ###   ########.fr       */
+/*   Created: 2025/07/26 13:59:04 by benes-al          #+#    #+#             */
+/*   Updated: 2025/07/26 16:09:42 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdint.h>
+//#include "push_swap.c"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+#include <stdio.h>
+#include <stdbool.h>
+
+bool is_valid_number(const char *token)
 {
-	void	*cal;
-
-	if (size && nmemb > SIZE_MAX / size)
-		return (NULL);
-	cal = malloc(size * nmemb);
-	if (!cal)
-		return (NULL);
-	ft_bzero(cal, (nmemb * size));
-	return (cal);
-}
-
-/*
-int	main(void)
-{
-	char *cal;
 	int	i;
-
+	
 	i = 0;
-	printf("%s\n", cal);
-	cal = calloc(__INT64_MAX__, 4);
-	while (i < 7)
+	if ((!token) || token[i] == '\0')
+		return (0);
+	if (token[i] == '-' || token[i] == '+')
+		i++;
+	if (token[i] == '\0')
+		return (0);
+	while (token[i])
 	{
-		printf("%i", cal[i]);
+		if (!(token[i] >= '0' && token[i] <= '9'))
+			return (0);
 		i++;
 	}
-}*/
+	return (1);
+}

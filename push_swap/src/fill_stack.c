@@ -1,41 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   fill_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 21:50:11 by benes-al          #+#    #+#             */
-/*   Updated: 2025/04/17 11:07:33 by benes-al         ###   ########.fr       */
+/*   Created: 2025/07/26 15:27:32 by benes-al          #+#    #+#             */
+/*   Updated: 2025/07/26 15:27:34 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	fill_stack(int argc, char **argv, t_stack *stack_a)
 {
-	unsigned char	*str;
-	size_t			i;
-
-	str = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{
-		if (str[i] == (unsigned char)c)
-		{
-			return ((void *)&str[i]);
-		}
-		i++;
-	}
-	return (NULL);
-}
-/*
-#include <string.h>
-
-int	main(void)
-{
-	char *s = "casa";
+	int		i;
 	
-	printf("%p\n", ft_memchr(s, 's', 4));
-	printf("%p", memchr(s, 's', 4));
-}*/
+	i = argc;
+	while (i > 0)
+	{
+		if (add_node_to_stack(stack_a, atoi(argv[i]), -1))
+			i--;
+		else
+			free(stack_a);
+	}
+}
