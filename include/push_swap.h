@@ -6,12 +6,12 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 18:23:46 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/26 16:08:13 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/26 17:37:59 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef push_swap_h
-# define push_swap_h
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
 //libraries
 
@@ -20,6 +20,7 @@
 #include <limits.h>
 #include <stdbool.h>
 
+//retirar esta libraria
 #include <stdio.h>
 
 //structs
@@ -79,5 +80,6 @@ bool	check_duplicates(t_stack *stack_a);
 int		calculate_max_bytes(int max_index);
 bool	is_valid_number(const char *str);
 void	ft_error (void);
+bool	check_min_max(long nbr);
 
 #endif
