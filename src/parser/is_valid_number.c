@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_stack.c                                      :+:      :+:    :+:   */
+/*   is_valid_number.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/12 17:45:43 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/24 17:24:01 by benes-al         ###   ########.fr       */
+/*   Created: 2025/07/26 13:59:04 by benes-al          #+#    #+#             */
+/*   Updated: 2025/07/29 14:55:03 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	print_stack(t_stack stack)
+bool is_valid_number(const char *token)
 {
-	t_node *current;
+	int	i;
 	
-	current = stack.top;
-	if(!stack.top)
+	i = 0;
+	if ((!token) || token[i] == '\0')
+		return (0);
+	if (token[i] == '-' || token[i] == '+')
+		i++;
+	if (token[i] == '\0')
+		return (0);
+	while (token[i])
 	{
-		write(1, "empty\n", 6);
-		return ;
+		if (!(token[i] >= '0' && token[i] <= '9'))
+			return (0);
+		i++;
 	}
-	printf("Stack (top to bottom):\n");
-	while (current)
-	{
-		printf("Value: %d | Index: %d\n", current->value, current->index);
-		current = current->next;
-	}
+	return (1);
 }
