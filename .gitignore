@@ -3,3 +3,4 @@ test.excalidraw
 *.h.gch
 .vscode/
 push_swap
+*.o

@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 13:56:55 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/29 23:36:39 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 10:54:28 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,27 +31,8 @@ void	print_stack(t_stack stack)
 		current = current->next;
 	}
 }
-#endif
-
-int	main(int argc, char **argv)
+void	print_content(t_stack stack_a, t_stack stack_b)
 {
-	t_stack	stack_a;
-	t_stack stack_b;
-	
-	stack_a.top = NULL;
-	stack_a.size = 0;
-	stack_b.top = NULL;
-	stack_b.size = 0;
-	
-	if (argc == 1)
-	{
-		return (0);
-	}
-	else
-		parser (argc, argv, &stack_a);
-			
-	#if 1
-	
 	printf("Before operation stack_a:\n");
 	print_stack(stack_a);
 	printf("\nBefore operation stack_b:\n");
@@ -65,9 +46,31 @@ int	main(int argc, char **argv)
 	printf("\nAfter operation stack_b:\n");
 	print_stack(stack_b);
 	printf("------------------------------\n");
+}
+#endif
+
+int	main(int argc, char **argv)
+{
+	t_stack	stack_a;
+	t_stack stack_b;
+	int		tokens;
+
+	stack_a.top = NULL;
+	stack_a.size = 0;
+	stack_b.top = NULL;
+	stack_b.size = 0;
 	
-	#endif
+	if (argc == 1)
+		return (0);
+	tokens = parser (argc, argv, &stack_a);
+	if (is_stack_sorted(&stack_a))
+		exit (0);
+	if (tokens == 2)
+	if (tokens == 2)
+	if (tokens == 2)
+	if (tokens == 2)
 	
+	print_content(stack_a, stack_b); 
 	free_stack(&stack_a);
 	return (0);
 	
