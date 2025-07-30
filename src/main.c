@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 13:56:55 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/30 17:11:43 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 17:26:05 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	print_stack(t_stack stack)
 		current = current->next;
 	}
 }
-void	print_content(t_stack stack_a, t_stack stack_b)
+void	print_content(t_stack stack_a, t_stack stack_b, int num_tokens)
 {
 	printf("Before operation stack_a:\n");
 	print_stack(stack_a);
@@ -40,7 +40,8 @@ void	print_content(t_stack stack_a, t_stack stack_b)
 	printf("------------------------------\n");
 
 	sort_index(&stack_a);
-	
+	sort_tokens(&stack_a, &stack_b, num_tokens);
+
 	printf("\nAfter operation stack_a:\n");
 	print_stack(stack_a);
 	printf("\nAfter operation stack_b:\n");
@@ -65,9 +66,9 @@ int	main(int argc, char **argv)
 	num_tokens = parser (argc, argv, &stack_a);
 	if (is_stack_sorted(&stack_a))
 		exit (0);
-	sort_tokens(&stack_a, &stack_b, num_tokens);
+	//sort_tokens(&stack_a, &stack_b, num_tokens);
 	
-	print_content(stack_a, stack_b); 
+	print_content(stack_a, stack_b, num_tokens); 
 	
 	free_stack(&stack_a);
 	return (0);

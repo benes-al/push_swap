@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 15:06:45 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/30 14:12:08 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 17:32:28 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	parser(int argc, char **argv, t_stack *stack_a)
 		if (!is_token_valid(tokens))
 			ft_error();
 		fill_stack(argc - 1, argv + 1, stack_a);
-		num_tokens = argc;
+		num_tokens = argc -1;
 	}
 	if (!check_duplicates(stack_a))
 		ft_error();
