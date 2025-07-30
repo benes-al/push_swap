@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 09:51:45 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/26 16:08:36 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 01:00:27 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ bool	check_duplicates(t_stack *stack_a)
 		while (checker)
 		{
 			if (current->value == checker->value)
-				ft_error ();
+				return (0);
 			checker = checker->next;
 		}
 		current = current->next;
 	}
-	return (0);
+	return (1);
 }

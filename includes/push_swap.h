@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 18:23:46 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/29 16:05:01 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 00:30:41 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ void	parser(int argc, char **argv, t_stack *stack_a);
 bool	is_valid_number(const char *token);
 bool	check_min_max(long nbr);
 bool	is_token_valid(char **tokens);
+int		count_tokens(char **tokens);
 bool	add_node_to_stack(t_stack *stack, int value, int index);
 void	fill_stack(int argc, char **argv, t_stack *stack_a);
 bool	check_duplicates(t_stack *stack_a);

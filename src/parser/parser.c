@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 15:06:45 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/29 16:49:25 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 01:14:19 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,19 @@ void	parser(int argc, char **argv, t_stack *stack_a)
 		tokens = ft_split(argv[1]);
 		if (!is_token_valid(tokens))
 			ft_error();
-		else
-		{
-			while(tokens[num_tokens])
-				num_tokens++;
-			fill_stack(num_tokens, tokens, stack_a);
-			free(tokens);
-		}
+		num_tokens = count_tokens(tokens);
+		fill_stack(num_tokens, tokens, stack_a);
+		free(tokens);
 	}
 	else
-		fill_stack(argc, argv, stack_a);
+	{
+		tokens = argv + 1;
+		if (!is_token_valid(tokens))
+			ft_error();
+		fill_stack(argc - 1, argv + 1, stack_a);
+	}
+	if (!check_duplicates(stack_a))
+		ft_error();
+	if (!is_stack_sorted(stack_a))
+		exit (0);
 }

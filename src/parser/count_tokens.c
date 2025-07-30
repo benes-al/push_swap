@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_token_valid.c                                   :+:      :+:    :+:   */
+/*   count_tokens.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/28 13:50:09 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/29 23:28:41 by benes-al         ###   ########.fr       */
+/*   Created: 2025/07/30 00:20:29 by benes-al          #+#    #+#             */
+/*   Updated: 2025/07/30 00:37:21 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-bool	is_token_valid(char **tokens)
+int	count_tokens(char **tokens)
 {
-	int		i;
-	long	num;
-	
-	i = 0;
-	num = 0;
-	while (tokens[i])
-	{
-		if (!is_valid_number(tokens[i]))
-			return (0);
-		num = ft_atol(tokens[i]);
-		if (!check_min_max(num))
-			return (0);
-		i++;
-	}
-	return (1);
+	int	num_tokens;
+
+	num_tokens = 0;
+	while(tokens[num_tokens])
+		num_tokens++;
+	return (num_tokens);
 }
+	

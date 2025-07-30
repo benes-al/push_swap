@@ -26,6 +26,7 @@ SRC_FILES = \
 	$(PARSE_DIR)/is_stack_sorted.c \
 	$(PARSE_DIR)/is_token_valid.c \
 	$(PARSE_DIR)/is_valid_number.c \
+	$(PARSE_DIR)/count_tokens.c \
 	$(SORT_DIR)/calculate_max_bytes.c \
 	$(SORT_DIR)/radix_sort.c \
 	$(SORT_DIR)/small_sort.c \
