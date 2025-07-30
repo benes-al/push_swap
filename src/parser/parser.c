@@ -6,13 +6,13 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 15:06:45 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/30 17:32:28 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 20:35:34 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	parser(int argc, char **argv, t_stack *stack_a)
+void	parser(int argc, char **argv, t_stack *stack_a)
 {
 	char	**tokens;
 	int		num_tokens;
@@ -38,5 +38,4 @@ int	parser(int argc, char **argv, t_stack *stack_a)
 	}
 	if (!check_duplicates(stack_a))
 		ft_error();
-	return (num_tokens);
 }

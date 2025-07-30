@@ -6,31 +6,38 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 21:27:49 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/30 18:13:02 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 21:10:13 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	radix_sort(t_stack *stack_a, t_stack *stack_b, int max_bytes)
+void	radix_sort(t_stack *stack_a, t_stack *stack_b)
 {
-	t_node	*current_a;
 	int	i;
-
-	current_a = stack_a->top;
+	int	j;
+	int	num_tokens;
+	int	max_bites;
+	
 	i = 0;
-	while (i <= max_bytes)
+	j = 0;
+	num_tokens = stack_a->size;
+	max_bites = calculate_max_bites(num_tokens - 1);
+	sort_index(stack_a);
+	while (i <= max_bites)
 	{
-		while (current_a)
+		while (j < num_tokens)
 		{
-			if (current_a->index >> i == 0)
-				pb(stack_a, stack_b);
-			else
+			if ((stack_a->top->index >> i) & 1)
 				ra(stack_a);
-			current_a = current_a->next;
+			else
+				pb(stack_a, stack_b);
+			j++;
 		}
 		while(stack_b->top)
 			pa(stack_a, stack_b);
+		print_stack(stack_a);
+		print_stack(stack_b);
 		i++;
 	}
 } 

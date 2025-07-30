@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calculate_max_bytes.c                              :+:      :+:    :+:   */
+/*   calculate_max_bites.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 16:39:50 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/24 13:52:54 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 18:49:50 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	calculate_max_bytes(int max_index)
+int	calculate_max_bites(int max_index)
 {
 	int	i;
 
