@@ -23,15 +23,17 @@ SRC_FILES = \
 	$(PARSE_DIR)/check_duplicates.c \
 	$(PARSE_DIR)/check_min_max.c \
 	$(PARSE_DIR)/fill_stack.c \
-	$(PARSE_DIR)/is_stack_sorted.c \
 	$(PARSE_DIR)/is_token_valid.c \
 	$(PARSE_DIR)/is_valid_number.c \
 	$(PARSE_DIR)/count_tokens.c \
 	$(SORT_DIR)/calculate_max_bytes.c \
+	$(SORT_DIR)/is_stack_sorted.c \
 	$(SORT_DIR)/radix_sort.c \
 	$(SORT_DIR)/small_sort.c \
 	$(SORT_DIR)/sort_index.c \
+	$(SORT_DIR)/sort_tokens.c \
 	$(UTILS_DIR)/free_stack.c \
+	$(UTILS_DIR)/free_tokens.c \
 	$(UTILS_DIR)/ft_atol.c \
 	$(UTILS_DIR)/ft_error.c \
 	$(UTILS_DIR)/ft_split.c \

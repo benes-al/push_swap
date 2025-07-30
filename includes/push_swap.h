@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 18:23:46 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/30 00:30:41 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 17:02:33 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,12 +65,14 @@ void	sort_four_numbers(t_stack *stack_a, t_stack *stack_b);
 void	sort_five_numbers(t_stack *stack_a, t_stack *stack_b);
 void	sort_index(t_stack *stack);
 int		calculate_max_bytes(int max_index);
+bool	is_stack_sorted(t_stack *stack_a);
+void	sort_tokens(t_stack *stack_a, t_stack *stack_b, int num_tokens);
 
 /******************************************************************************/
 /*                               PARSER                                       */
 /******************************************************************************/
 
-void	parser(int argc, char **argv, t_stack *stack_a);
+int		parser(int argc, char **argv, t_stack *stack_a);
 bool	is_valid_number(const char *token);
 bool	check_min_max(long nbr);
 bool	is_token_valid(char **tokens);
@@ -78,7 +80,6 @@ int		count_tokens(char **tokens);
 bool	add_node_to_stack(t_stack *stack, int value, int index);
 void	fill_stack(int argc, char **argv, t_stack *stack_a);
 bool	check_duplicates(t_stack *stack_a);
-bool	is_stack_sorted(t_stack *stack_a);
 
 /******************************************************************************/
 /*                               UTILS                                        */
@@ -88,5 +89,6 @@ char	**ft_split(char *s);
 long	ft_atol(const char *token);
 void	ft_error(void);
 void 	free_stack(t_stack *stack);
+void	free_tokens(char **tokens);
 
 #endif

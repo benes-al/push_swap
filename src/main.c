@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 13:56:55 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/30 10:54:28 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 17:11:43 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	main(int argc, char **argv)
 {
 	t_stack	stack_a;
 	t_stack stack_b;
-	int		tokens;
+	int		num_tokens;
 
 	stack_a.top = NULL;
 	stack_a.size = 0;
@@ -62,15 +62,13 @@ int	main(int argc, char **argv)
 	
 	if (argc == 1)
 		return (0);
-	tokens = parser (argc, argv, &stack_a);
+	num_tokens = parser (argc, argv, &stack_a);
 	if (is_stack_sorted(&stack_a))
 		exit (0);
-	if (tokens == 2)
-	if (tokens == 2)
-	if (tokens == 2)
-	if (tokens == 2)
+	sort_tokens(&stack_a, &stack_b, num_tokens);
 	
 	print_content(stack_a, stack_b); 
+	
 	free_stack(&stack_a);
 	return (0);
 	

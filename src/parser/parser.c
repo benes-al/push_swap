@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 15:06:45 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/30 10:51:05 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 14:12:08 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	parser(int argc, char **argv, t_stack *stack_a)
 			ft_error();
 		num_tokens = count_tokens(tokens);
 		fill_stack(num_tokens, tokens, stack_a);
-		free(tokens);
+		free_tokens(tokens);
 	}
 	else
 	{
