@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 16:30:48 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/11 18:48:27 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 22:37:15 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ void	swap(t_stack *stack)
 	t_node	*temp;
 	int		value_temp;
 	int		index_temp;
-	
+
 	temp = stack->top;
 	value_temp = temp->next->value;
 	index_temp = temp->next->index;
 	temp->next->value = temp->value;
 	temp->next->index = temp->index;
 	temp->value = value_temp;
-	temp->index = index_temp;	
+	temp->index = index_temp;
 }
 
 void	sa(t_stack *stack_a)
@@ -52,7 +52,7 @@ void	sb(t_stack *stack_b)
 void	ss(t_stack *stack_a, t_stack *stack_b)
 {
 	if (stack_a && stack_a->size >= 2 && stack_b && stack_b->size >= 2)
-	{	
+	{
 		swap(stack_a);
 		swap(stack_b);
 		write (1, "ss\n", 3);

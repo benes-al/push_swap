@@ -6,13 +6,13 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 16:04:17 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/26 16:04:58 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 22:31:07 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_error (void)
+void	ft_error(void)
 {
 	write(2, "Error\n", 6);
 	exit (1);

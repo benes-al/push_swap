@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 21:27:49 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/30 21:21:47 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 22:26:05 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	radix_sort(t_stack *stack_a, t_stack *stack_b)
 	int	j;
 	int	num_tokens;
 	int	max_bites;
-	
+
 	i = 0;
 	num_tokens = stack_a->size;
 	max_bites = calculate_max_bites(num_tokens - 1);
@@ -34,8 +34,8 @@ void	radix_sort(t_stack *stack_a, t_stack *stack_b)
 				pb(stack_a, stack_b);
 			j++;
 		}
-		while(stack_b->top)
+		while (stack_b->top)
 			pa(stack_a, stack_b);
 		i++;
 	}
-} 
+}

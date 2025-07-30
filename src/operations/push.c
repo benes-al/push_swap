@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 16:33:06 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/11 18:48:44 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 22:35:11 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	push(t_stack *from_stack, t_stack *to_stack)
 {
-	t_stack temp;
-	
+	t_stack	temp;
+
 	temp.top = 0;
 	temp.size = 0;
 	if (to_stack->size == 0)
@@ -35,6 +35,7 @@ void	push(t_stack *from_stack, t_stack *to_stack)
 	from_stack->size--;
 	to_stack->size++;
 }
+
 void	pa(t_stack *stack_a, t_stack *stack_b)
 {
 	if (stack_b && stack_b->size > 0)
@@ -51,4 +52,4 @@ void	pb(t_stack *stack_a, t_stack *stack_b)
 		push(stack_a, stack_b);
 		write(1, "pb\n", 3);
 	}
-}	
+}

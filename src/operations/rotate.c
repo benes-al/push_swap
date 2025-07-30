@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 22:03:42 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/12 15:05:53 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 22:23:15 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	rotate(t_stack *stack)
 {
 	t_stack	temp;
 	int		node;
-	
+
 	node = 1;
 	temp.top = stack->top;
 	temp.size = stack->size;

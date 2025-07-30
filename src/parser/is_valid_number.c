@@ -6,16 +6,16 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 13:59:04 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/29 14:55:03 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 22:36:44 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-bool is_valid_number(const char *token)
+bool	is_valid_number(const char *token)
 {
 	int	i;
-	
+
 	i = 0;
 	if ((!token) || token[i] == '\0')
 		return (0);

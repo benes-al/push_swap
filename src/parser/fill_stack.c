@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 15:27:32 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/30 00:47:34 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 22:24:17 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	fill_stack(int argc, char **argv, t_stack *stack_a)
 {
 	int		i;
-	
+
 	i = argc - 1;
 	while (i >= 0)
 	{
@@ -23,5 +23,5 @@ void	fill_stack(int argc, char **argv, t_stack *stack_a)
 			i--;
 		else
 			free(stack_a);
-	}	
-}	
+	}
+}

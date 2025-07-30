@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 18:23:46 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/30 22:15:53 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 22:30:46 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ bool	check_duplicates(t_stack *stack_a);
 char	**ft_split(char *s);
 long	ft_atol(const char *token);
 void	ft_error(void);
-void 	free_stack(t_stack *stack);
+void	free_stack(t_stack *stack);
 void	free_tokens(char **tokens);
 
 #endif

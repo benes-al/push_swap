@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 17:20:32 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/30 20:45:00 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 22:28:38 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	sort_tokens(t_stack *stack_a, t_stack *stack_b)
 {
 	int	num_tokens;
-	
+
 	num_tokens = stack_a->size;
 	if (num_tokens == 2)
 		sort_two_numbers(stack_a);

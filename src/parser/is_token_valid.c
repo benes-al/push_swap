@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 13:50:09 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/29 23:28:41 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 22:36:56 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ bool	is_token_valid(char **tokens)
 {
 	int		i;
 	long	num;
-	
+
 	i = 0;
 	num = 0;
 	while (tokens[i])

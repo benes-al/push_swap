@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/09 19:16:19 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/11 18:48:02 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 22:37:28 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ void	reverse_rotate(t_stack *stack)
 {
 	t_stack	temp;
 	int		node;
-	
+
 	node = 1;
 	temp.top = stack->top;
-	temp.size = stack->size; 
+	temp.size = stack->size;
 	while (node < (stack->size) - 1)
 	{
 		temp.top = temp.top->next;

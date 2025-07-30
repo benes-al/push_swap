@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 15:26:55 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/26 15:26:59 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 22:23:42 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 bool	add_node_to_stack(t_stack *stack, int value, int index)
 {
-	t_node *new_node;
-	
+	t_node	*new_node;
+
 	new_node = malloc(sizeof(t_node));
 	if (!new_node)
 		return (0);
