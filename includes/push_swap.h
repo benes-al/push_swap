@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 18:23:46 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/30 17:02:33 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/30 18:05:55 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ void	sort_index(t_stack *stack);
 int		calculate_max_bytes(int max_index);
 bool	is_stack_sorted(t_stack *stack_a);
 void	sort_tokens(t_stack *stack_a, t_stack *stack_b, int num_tokens);
+void	radix_sort(t_stack *stack_a, t_stack *stack_b, int max_bytes);
 
 /******************************************************************************/
 /*                               PARSER                                       */
