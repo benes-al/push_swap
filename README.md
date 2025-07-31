@@ -1,6 +1,19 @@
-🚀 push_swap
+```plaintext                                                                                                                 
+                                     88                                                                             
+                                     88                                                                             
+                                     88                                                                             
+8b,dPPYba,   88       88  ,adPPYba,  88,dPPYba,             ,adPPYba,  8b      db      d8  ,adPPYYba,  8b,dPPYba,   
+88P'    "8a  88       88  I8[    ""  88P'    "8a            I8[    ""  `8b    d88b    d8'  ""     `Y8  88P'    "8a  
+88       d8  88       88   `"Y8ba,   88       88             `"Y8ba,    `8b  d8'`8b  d8'   ,adPPPPP88  88       d8  
+88b,   ,a8"  "8a,   ,a88  aa    ]8I  88       88            aa    ]8I    `8bd8'  `8bd8'    88,    ,88  88b,   ,a8"  
+88`YbbdP"'    `"YbbdP'Y8  `"YbbdP"'  88       88            `"YbbdP"'      YP      YP      `"8bbdP"Y8  88`YbbdP"'   
+88                                                                                                     88           
+88                                              888888888888                                           88           
 
-A School 42 sorting challenge implemented using linked lists and a radix sort approach.
+
+
+This project sorts data in a stack using a limited set of instructions, aiming to achieve the lowest possible number of actions. The goal is to work with various algorithms and select the most appropriate one for optimized data sorting.
+
 📂 Project Structure
 
 ```plaintext
@@ -40,6 +53,7 @@ push_swap/
 🧠 Overview
 
 The program reads a series of integers (either as multiple arguments or as a single space-separated string), validates them, builds a linked-list stack (stack_a), and sorts the stack(s) using a radix sort adapted for stack operations. Memory safety and error handling are prioritized, handling invalid tokens, duplicates, and allocation failures.
+
 📈 Algorithm & Complexity
 Radix Sort Using Stacks
 
