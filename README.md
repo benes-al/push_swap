@@ -11,7 +11,7 @@ the lowest possible number of actions. The goal is to work with various algorith
 the most appropriate one for optimized data sorting.
 
 📂 Project Structure
-
+```plaintext
 push_swap/
 ├── includes/
 │   └── push_swap.h
@@ -44,7 +44,7 @@ push_swap/
 ├── .gitignore
 ├── Makefile
 └── README.md
-
+```
 🧠 Overview
 
 The program reads a series of integers (either as multiple arguments or as a single space-separated
