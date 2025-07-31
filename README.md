@@ -1,18 +1,14 @@
 ```plaintext
-                                     88                                                                             
-                                     88                                                                             
-                                     88                                                                             
-8b,dPPYba,   88       88  ,adPPYba,  88,dPPYba,             ,adPPYba,  8b      db      d8  ,adPPYYba,  8b,dPPYba,   
-88P'    "8a  88       88  I8[    ""  88P'    "8a            I8[    ""  `8b    d88b    d8'  ""     `Y8  88P'    "8a  
-88       d8  88       88   `"Y8ba,   88       88             `"Y8ba,    `8b  d8'`8b  d8'   ,adPPPPP88  88       d8  
-88b,   ,a8"  "8a,   ,a88  aa    ]8I  88       88            aa    ]8I    `8bd8'  `8bd8'    88,    ,88  88b,   ,a8"  
-88`YbbdP"'    `"YbbdP'Y8  `"YbbdP"'  88       88            `"YbbdP"'      YP      YP      `"8bbdP"Y8  88`YbbdP"'   
-88                                                                                                     88           
-88                                              888888888888                                           88           
+                                
+  _ __  _   _ ___| |__      _____      ____ _ _ __  
+ | '_ \| | | / __| '_ \    / __\ \ /\ / / _` | '_ \ 
+ | |_) | |_| \__ \ | | |   \__ \\ V  V / (_| | |_) |
+ | .__/ \__,_|___/_| |_|___|___/ \_/\_/ \__,_| .__/ 
+ |_|                  |_____|                |_|    
 
-
-
-This project sorts data in a stack using a limited set of instructions, aiming to achieve the lowest possible number of actions. The goal is to work with various algorithms and select the most appropriate one for optimized data sorting.
+This project sorts data in a stack using a limited set of instructions, aiming to achieve
+the lowest possible number of actions. The goal is to work with various algorithms and select
+the most appropriate one for optimized data sorting.
 
 📂 Project Structure
 
@@ -52,14 +48,19 @@ push_swap/
 
 🧠 Overview
 
-The program reads a series of integers (either as multiple arguments or as a single space-separated string), validates them, builds a linked-list stack (stack_a), and sorts the stack(s) using a radix sort adapted for stack operations. Memory safety and error handling are prioritized, handling invalid tokens, duplicates, and allocation failures.
+The program reads a series of integers (either as multiple arguments or as a single space-separated
+string), validates them, builds a linked-list stack (stack_a), and sorts the stack(s) using
+a radix sort adapted for stack operations. Memory safety and error handling are prioritized,
+handling invalid tokens, duplicates, and allocation failures.
 
 📈 Algorithm & Complexity
+
 Radix Sort Using Stacks
 
     Each integer is assigned an index based on its sorted position.
 
-    The algorithm processes each bit from least-significant to most-significant, repeatedly moving elements between two stacks (a and b) and then back into a.
+    The algorithm processes each bit from least-significant to most-significant, repeatedly
+    moving elements between two stacks (a and b) and then back into a.
 
     Each bit pass takes O(n), and with k bits needed, the total time complexity is O(n · k).
 
@@ -69,16 +70,19 @@ Radix Sort Using Stacks
 
 Small List Optimization
 
-    For n ≤ 5, the algorithm uses a specialized routine that sorts the list with fewer operations (e.g., at most two operations for three elements).
+    For n ≤ 5, the algorithm uses a specialized routine that sorts the list with fewer
+    operations (e.g., at most two operations for three elements).
 
     This avoids full radix-passes for small lists and improves efficiency.
 
 🛠️ Compilation & Usage
+
 Build
 
 make
 
 Generates the executable push_swap.
+
 Usage
 
 ./push_swap 3 2 1 5
@@ -86,6 +90,7 @@ Usage
 ./push_swap "3 2 1 5"
 
 The program outputs the sequence of operations required to sort the stack.
+
 Supported Operations
 
     sa, sb, ss – swap
@@ -102,7 +107,8 @@ Supported Operations
 
     Duplicate detection: identifies duplicate values after stack creation and exits cleanly if found.
 
-    Memory handling: on any error (e.g., malloc failure), all allocated nodes are freed using free_stack() before exiting.
+    Memory handling: on any error (e.g., malloc failure), all allocated nodes are freed using
+    free_stack() before exiting.
 
 📁 Module Walkthrough
 
@@ -112,7 +118,8 @@ Supported Operations
 
     sorting/: main radix sort logic, small-list sorting routines, and index assignment.
 
-    utils/: auxiliary functions including ft_atol, ft_split, error handler (ft_error), and memory cleanup routines.
+    utils/: auxiliary functions including ft_atol, ft_split, error handler (ft_error),
+    and memory cleanup routines.
 
 ✅ Example Run
 
