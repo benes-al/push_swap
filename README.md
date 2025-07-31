@@ -3,6 +3,7 @@
 A School 42 sorting challenge implemented using linked lists and a radix sort approach.
 📂 Project Structure
 
+```plaintext
 push_swap/
 ├── includes/
 │   └── push_swap.h
