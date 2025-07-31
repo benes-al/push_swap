@@ -12,7 +12,6 @@ the most appropriate one for optimized data sorting.
 
 📂 Project Structure
 
-```plaintext
 push_swap/
 ├── includes/
 │   └── push_swap.h
