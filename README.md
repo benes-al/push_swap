@@ -1,10 +1,7 @@
-Operations
-----------
+🚀 push_swap
 
-I have a check for edge cases in every operation before print the operation name
-
-
-## Project Structure
+A School 42 sorting challenge implemented using linked lists and a radix sort approach.
+📂 Project Structure
 
 push_swap/
 ├── includes/
@@ -38,3 +35,89 @@ push_swap/
 ├── .gitignore
 ├── Makefile
 └── README.md
+
+🧠 Overview
+
+The program reads a series of integers (either as multiple arguments or as a single space-separated string), validates them, builds a linked-list stack (stack_a), and sorts the stack(s) using a radix sort adapted for stack operations. Memory safety and error handling are prioritized, handling invalid tokens, duplicates, and allocation failures.
+📈 Algorithm & Complexity
+Radix Sort Using Stacks
+
+    Each integer is assigned an index based on its sorted position.
+
+    The algorithm processes each bit from least-significant to most-significant, repeatedly moving elements between two stacks (a and b) and then back into a.
+
+    Each bit pass takes O(n), and with k bits needed, the total time complexity is O(n · k).
+
+    Since k ≈ log₂(n), overall complexity is O(n · log n).
+
+    Memory usage is O(n) due to the linked-list node allocations.
+
+Small List Optimization
+
+    For n ≤ 5, the algorithm uses a specialized routine that sorts the list with fewer operations (e.g., at most two operations for three elements).
+
+    This avoids full radix-passes for small lists and improves efficiency.
+
+🛠️ Compilation & Usage
+Build
+
+make
+
+Generates the executable push_swap.
+Usage
+
+./push_swap 3 2 1 5
+# or
+./push_swap "3 2 1 5"
+
+The program outputs the sequence of operations required to sort the stack.
+Supported Operations
+
+    sa, sb, ss – swap
+
+    pa, pb – push
+
+    ra, rb, rr – rotate
+
+    rra, rrb, rrr – reverse-rotate
+
+⚙️ Validation & Safety
+
+    Input validation: checks each token for valid integer format and range.
+
+    Duplicate detection: identifies duplicate values after stack creation and exits cleanly if found.
+
+    Memory handling: on any error (e.g., malloc failure), all allocated nodes are freed using free_stack() before exiting.
+
+📁 Module Walkthrough
+
+    parser/: parsing logic, string splitting, token validation, and stack initialization.
+
+    operations/: implement core stack operations (push, swap, rotate, and reverse-rotate).
+
+    sorting/: main radix sort logic, small-list sorting routines, and index assignment.
+
+    utils/: auxiliary functions including ft_atol, ft_split, error handler (ft_error), and memory cleanup routines.
+
+✅ Example Run
+
+Initial state:
+
+stack_a: [4, 3, 2, 1]
+
+Sequence of operations:
+
+pb
+pb
+sa
+pb
+pb
+pa
+pa
+ra
+pa
+pa
+
+Final state:
+
+stack_a: [1, 2, 3, 4]
