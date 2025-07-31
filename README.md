@@ -26,6 +26,8 @@ push_swap/
 │   │   ├── check_duplicates.c
 │   │   ├── check_min_max.c
 │   │   ├── fill_stack.c
+│   │   ├── is_multiple_argc_valid.c
+│   │   ├── is_single_argc_valid.c
 │   │   ├── is_stack_sorted.c
 │   │   ├── is_token_valid.c
 │   │   ├── is_valid_number.c
@@ -33,12 +35,15 @@ push_swap/
 │   ├── sorting/
 │   │   ├── calculate_max_bytes.c
 │   │   ├── radix_sort.c
+│   │   ├── is_stack_sorted.c
 │   │   ├── small_sort.c
+│   │   ├── sort_tokens.c
 │   │   └── sort_index.c
 │   ├── utils/
 │   │   ├── free_stack.c
 │   │   ├── ft_atol.c
 │   │   ├── ft_error.c
+│   │   ├── ft_free_tokens.c
 │   │   └── ft_split.c
 │   └── main.c
 ├── .gitignore
