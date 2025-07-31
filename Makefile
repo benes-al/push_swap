@@ -42,34 +42,27 @@ SRC_FILES = \
 	$(OPS_DIR)/rotate.c \
 	$(OPS_DIR)/swap.c
 
-# Object files (same as .c, but with .o extension)
+# Object files
 OBJ_FILES   = $(SRC_FILES:.c=.o)
 
 # **************************************************************************** #
 #                                MAKE RULES                                    #
 # **************************************************************************** #
 
-# Default target
 all: $(NAME)
 
-# Linking object files into the binary
 $(NAME): $(OBJ_FILES)
 	$(CC) $(CFLAGS) $(OBJ_FILES) -o $(NAME)
 
-# Rule to compile .c into .o
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Clean object files
 clean:
 	rm -f $(OBJ_FILES)
 
-# Clean everything
 fclean: clean
 	rm -f $(NAME)
 
-# Rebuild everything
 re: fclean all
 
-# Phony targets (non-file)
 .PHONY: all clean fclean re
