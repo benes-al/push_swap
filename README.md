@@ -14,7 +14,7 @@ push_swap/
 │   │   ├── push.c
 │   │   ├── reverse_rotate.c
 │   │   ├── rotate.c
-│   │   └── swap.c            
+│   │   └── swap.c
 │   ├── parser/
 │   │   ├── add_node_to_stack.c
 │   │   ├── check_duplicates.c

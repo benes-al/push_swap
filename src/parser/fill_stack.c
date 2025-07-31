@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 15:27:32 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/30 22:24:17 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/31 14:41:09 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ void	fill_stack(int argc, char **argv, t_stack *stack_a)
 		if (add_node_to_stack(stack_a, ft_atol(argv[i]), -1))
 			i--;
 		else
-			free(stack_a);
+			free_stack(stack_a);
 	}
 }

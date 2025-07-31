@@ -6,7 +6,7 @@
 /*   By: benes-al <benes-al@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 18:23:46 by benes-al          #+#    #+#             */
-/*   Updated: 2025/07/30 22:30:46 by benes-al         ###   ########.fr       */
+/*   Updated: 2025/07/31 15:35:40 by benes-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,8 @@ void	radix_sort(t_stack *stack_a, t_stack *stack_b);
 /******************************************************************************/
 
 void	parser(int argc, char **argv, t_stack *stack_a);
+void	is_single_argc_valid(char **argv, t_stack *stack_a);
+void	is_multiple_argc_valid(int argc, char **argv, t_stack *stack_a);
 bool	is_valid_number(const char *token);
 bool	check_min_max(long nbr);
 bool	is_token_valid(char **tokens);

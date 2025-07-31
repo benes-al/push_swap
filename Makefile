@@ -6,7 +6,7 @@ NAME        = push_swap
 
 # Compiler and flags
 CC          = cc
-CFLAGS      = -Wall -Wextra -Werror -Iincludes
+CFLAGS      = -Wall -Wextra -Werror -Iincludes -g
 
 # Source folders
 SRC_DIR     = src
@@ -26,6 +26,8 @@ SRC_FILES = \
 	$(PARSE_DIR)/is_token_valid.c \
 	$(PARSE_DIR)/is_valid_number.c \
 	$(PARSE_DIR)/count_tokens.c \
+	$(PARSE_DIR)/is_single_argc_valid.c \
+	$(PARSE_DIR)/is_multiple_argc_valid.c \
 	$(SORT_DIR)/calculate_max_bites.c \
 	$(SORT_DIR)/is_stack_sorted.c \
 	$(SORT_DIR)/radix_sort.c \
