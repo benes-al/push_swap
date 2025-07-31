@@ -5,7 +5,7 @@
  | |_) | |_| \__ \ | | |   \__ \\ V  V / (_| | |_) |
  | .__/ \__,_|___/_| |_|___|___/ \_/\_/ \__,_| .__/ 
  |_|                  |_____|                |_|    
-
+```
 This project sorts data in a stack using a limited set of instructions, aiming to achieve
 the lowest possible number of actions. The goal is to work with various algorithms and select
 the most appropriate one for optimized data sorting.
